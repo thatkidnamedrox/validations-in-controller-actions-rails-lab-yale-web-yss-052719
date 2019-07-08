@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   validate :category_options
 
   def category_options
-    options = ["fiction", "non-fiction"]
+    options = ["Fiction", "Non-Fiction"]
     if !options.include?(category)
       errors.add(:category, "must be either fiction or non-fiction")
     end
